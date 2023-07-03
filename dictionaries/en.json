@@ -1,0 +1,77 @@
+{
+  "greeting": "Hi, I am",
+  "name": "Nazanin Namjoo Nik",
+  "role": "English Teacher & Translator",
+  "aboutMe": "I am an English teacher with more than 20 years of teaching experience at all levels of education. I also have a TTC degree in three levels: child, adolescent, and adult.",
+  "links": {
+    "email": "nznamjoonik1967@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/nazanin-namjoo-nik-713028276/",
+    "phone": "+989120392124"
+  },
+  "educations": {
+    "title": "Educations",
+    "list": [
+      {
+        "name": "Islamic Azad University North Tehran Branch",
+        "title": "Bachelor's degree, English translation",
+        "date": {
+          "from": "Oct 1994",
+          "to": "Sep 1998"
+        },
+        "location": "Tehran, Iran"
+      },
+      {
+        "name": "Simin Institute",
+        "title": "TTC (children, adolescents, adults)",
+        "date": {
+          "from": "Oct 1987",
+          "to": "Sep 1988"
+        },
+        "location": "Tehran, Iran"
+      }
+    ]
+  },
+  "experiences": {
+    "title": "Experiences",
+    "list": [
+      {
+        "position": "English Teacher",
+        "company": "Tollou School",
+        "date": {
+          "from": "Oct 2004",
+          "to": "Sep 2015"
+        }
+      },
+      {
+        "position": "English Tutor",
+        "date": {
+          "from": "Oct 1987",
+          "to": "Oct 2007"
+        }
+      },
+      {
+        "position": "Translator",
+        "date": {
+          "from": "Nov 1995",
+          "to": "Dec 2006"
+        },
+        "description": "Legal translation, translation in dentistry, translation for broadcasting organization"
+      },
+      {
+        "position": "English Teacher",
+        "company": "Simin Institute",
+        "date": {
+          "from": "Oct 1988",
+          "to": "Oct 1993"
+        }
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "list": ["Translation", "Teaching (children)", "Teaching (adolescents)", "Teaching (adults)"]
+  },
+  "header": {
+    "titles": ["Skills", "Experiences", "Educations"]
+  }
+}
