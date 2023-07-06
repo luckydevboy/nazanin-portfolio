@@ -5,42 +5,47 @@ import globe from "@/public/icons/globe.svg";
 import * as React from "react";
 import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
-
-const actions = [
-  {
-    icon: "En",
-    name: "English",
-  },
-  {
-    icon: "Fa",
-    name: "Farsi",
-  },
-];
+import { useRouter } from "next/navigation";
 
 const LangSwitch = () => {
+  const router = useRouter();
+
+  const actions = [
+    {
+      icon: "En",
+      name: "English",
+      onClick: () => router.push("/en"),
+    },
+    {
+      icon: "Fa",
+      name: "Farsi",
+      onClick: () => router.push("/fa"),
+    },
+  ];
+
   return (
     <SpeedDial
-      ariaLabel="Lanugage switcher"
+      ariaLabel="Language switcher"
       sx={{
         position: "fixed",
         bottom: 32,
         right: 32,
       }}
+      icon={<Image src={globe} width={28} height={28} alt="Globe" />}
       FabProps={{
         sx: {
-          background: "#695E7C",
-          ":hover": {
-            background: "#695E7C",
+          "&:hover": {
+            bgcolor: "#695E7C",
           },
         },
       }}
-      icon={<Image src={globe} width={28} height={28} alt="Globe" />}
     >
       {actions.map((action) => (
         <SpeedDialAction
           key={action.name}
           icon={action.icon}
           tooltipTitle={action.name}
+          onClick={action.onClick}
         />
       ))}
     </SpeedDial>

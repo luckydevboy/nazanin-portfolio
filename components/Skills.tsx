@@ -1,15 +1,12 @@
 import React from "react";
 
-type Dictionary =
-  typeof import("../dictionaries/en.json");
+type Dictionary = typeof import("../dictionaries/en.json");
 
 type Props = {
   dictionary: Dictionary;
 };
 
-const Skills = ({
-  dictionary,
-}: Props) => {
+const Skills = ({ dictionary }: Props) => {
   return (
     <section
       className="pt-6 pb-12 xl:pb-36 xl:pt-16 max-w-xl xl:max-w-6xl mx-auto text-center"
@@ -19,20 +16,16 @@ const Skills = ({
         {dictionary.skills.title}
       </h1>
       <div className="flex justify-center xl:flex-col flex-wrap xl:max-h-80 xl:text-left xl:justify-start">
-        {dictionary.skills.list.map(
-          (skill, index) => (
-            <React.Fragment
-              key={`skill-${index}`}
-            >
-              <div className="text-tertiary text-2xl font-semibold my-2 hidden xl:block">
-                {skill}
-              </div>
-              <span className="py-0.5 px-2.5 xl:hidden bg-aliceBlue m-1 rounded-full text-center text-tertiary">
-                {skill}
-              </span>
-            </React.Fragment>
-          )
-        )}
+        {dictionary.skills.list.map((skill, index) => (
+          <React.Fragment key={`skill-${index}`}>
+            <div className="text-tertiary text-2xl font-semibold my-2 hidden xl:block">
+              {skill}
+            </div>
+            <span className="py-0.5 px-2.5 xl:hidden bg-secondary m-1 rounded-full text-center text-tertiary">
+              {skill}
+            </span>
+          </React.Fragment>
+        ))}
       </div>
     </section>
   );

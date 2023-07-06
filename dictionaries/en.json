@@ -1,13 +1,8 @@
 {
-  "greeting": "Hi, I am",
+  "greeting": "Hi, I'm",
   "name": "Nazanin Namjoo Nik",
   "role": "English Teacher & Translator",
-  "aboutMe": "I am an English teacher with more than 20 years of teaching experience at all levels of education. I also have a TTC degree in three levels: child, adolescent, and adult.",
-  "links": {
-    "email": "nznamjoonik1967@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/nazanin-namjoo-nik-713028276/",
-    "phone": "+989120392124"
-  },
+  "aboutMe": "I'm an English teacher with more than 20 years of teaching experience at all levels of education. I also have a TTC degree in three levels: child, adolescent, and adult.",
   "educations": {
     "title": "Educations",
     "list": [
@@ -71,7 +66,14 @@
     "title": "Skills",
     "list": ["Translation", "Teaching (children)", "Teaching (adolescents)", "Teaching (adults)"]
   },
-  "header": {
-    "titles": ["Skills", "Experiences", "Educations"]
-  }
+  "header": [{
+    "title": "Educations",
+    "hashtag": "#educations"
+  },{
+    "title": "Experiences",
+    "hashtag": "#experiences"
+  },{
+    "title": "Skills",
+    "hashtag": "#skills"
+  }]
 }
