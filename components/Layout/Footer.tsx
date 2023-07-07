@@ -41,10 +41,7 @@ const Footer = ({ dictionary }: Props) => {
         >
           <Image src={whatsapp} width={28} height={28} alt="LinkedIn" />
         </a>
-        <a
-          href={`https://wa.me/${data.telegramId}`}
-          className="cursor-pointer block"
-        >
+        <a href={data.telegramId} className="cursor-pointer block">
           <Image src={telegramWhite} width={28} height={28} alt="Telegram" />
         </a>
       </div>
