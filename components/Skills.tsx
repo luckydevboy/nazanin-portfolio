@@ -21,7 +21,7 @@ const Skills = ({ dictionary }: Props) => {
             <div className="text-tertiary text-2xl font-semibold my-2 hidden xl:block">
               {skill}
             </div>
-            <span className="py-0.5 px-2.5 xl:hidden bg-quaternary m-1 rounded-full text-center text-tertiary">
+            <span className="px-3 py-1 xl:hidden bg-quaternary m-1 rounded-full text-center text-tertiary">
               {skill}
             </span>
           </React.Fragment>
