@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import portrait from "@/public/images/my-portrait.jpg";
-import phoneWhite from "@/public/icons/phone-white.svg";
-import phone from "@/public/icons/phone.svg";
+import whatsappWhite from "@/public/icons/whatsapp-white.svg";
+import whatsapp from "@/public/icons/whatsapp.svg";
+import telegram from "@/public/icons/telegram.svg";
 import email from "@/public/icons/email.svg";
 import linkedin from "@/public/icons/linkedin.svg";
 import { Dictionary } from "@/types";
@@ -22,7 +23,7 @@ const Introduction = ({ dictionary }: Props) => {
       <div className="rounded-full overflow-hidden relative hidden xl:block w-48 h-48">
         <Image src={portrait} fill alt="Portrait" />
       </div>
-      <div className="rounded-full overflow-hidden relative xl:hidden w-28 h-28">
+      <div className="rounded-full overflow-hidden relative xl:hidden h-40 w-40">
         <Image src={portrait} fill alt="Portrait" />
       </div>
 
@@ -42,7 +43,7 @@ const Introduction = ({ dictionary }: Props) => {
         className={`bg-primary text-white w-56 h-12 flex gap-x-3 items-center text-lg font-bold justify-center rounded-md ${
           clicked ? "border border-white border-dashed" : ""
         }`}
-        href={`tel:${data.phone}`}
+        href={`https://wa.me/${data.phone}`}
         onClick={() => setClicked(true)}
       >
         <span>
@@ -51,9 +52,9 @@ const Introduction = ({ dictionary }: Props) => {
             "$1 $2 $3 $4"
           )}
         </span>
-        <Image src={phoneWhite} width={24} height={24} alt="Phone" />
+        <Image src={whatsappWhite} width={28} height={28} alt="Phone" />
       </a>
-      <div className="hidden xl:flex xl:flex-col absolute top-1/2 transform -translate-y-1/2 left-12">
+      <div className="hidden xl:flex xl:flex-col xl:gap-y-3 absolute top-1/2 transform -translate-y-1/2 left-12">
         <a
           href={`mailto:${data.email}`}
           target="_blank"
@@ -66,12 +67,21 @@ const Introduction = ({ dictionary }: Props) => {
           href={data.linkedin}
           target="_blank"
           rel="noreferrer"
-          className="cursor-pointer mt-2.5 block"
+          className="cursor-pointer block"
         >
           <Image src={linkedin} width={28} height={28} alt="LinkedIn" />
         </a>
-        <a href={`tel:${data.phone}`} className="cursor-pointer mt-2.5 block">
-          <Image src={phone} width={28} height={28} alt="LinkedIn" />
+        <a
+          href={`https://wa.me/${data.phone}`}
+          className="cursor-pointer block"
+        >
+          <Image src={whatsapp} width={28} height={28} alt="Whatsapp" />
+        </a>
+        <a
+          href={`https://wa.me/${data.telegramId}`}
+          className="cursor-pointer block"
+        >
+          <Image src={telegram} width={28} height={28} alt="Telegram" />
         </a>
       </div>
     </section>

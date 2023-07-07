@@ -19,7 +19,7 @@ const Header = ({ dictionary }: Props) => {
         <Image src={logo} width={40} height={40} alt="Logo" />
       </div>
 
-      <ul className="flex gap-x-10 ml-12 px-4 py-2 overflow-x-auto">
+      <ul className="flex gap-x-4 xl:gap-x-10 ml-12 px-4 py-2 overflow-x-auto">
         {dictionary.header.map((item) => (
           <li
             key={item.hashtag}

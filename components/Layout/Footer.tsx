@@ -2,7 +2,8 @@ import Image from "next/image";
 import { Dictionary } from "@/types";
 import linkedin from "@/public/icons/linkedin-white.svg";
 import email from "@/public/icons/email-white.svg";
-import phone from "@/public/icons/phone-white.svg";
+import whatsapp from "@/public/icons/whatsapp-white.svg";
+import telegramWhite from "@/public/icons/telegram-white.svg";
 import logo from "@/public/images/logo-white.png";
 import data from "@/data";
 
@@ -17,7 +18,7 @@ const Footer = ({ dictionary }: Props) => {
       <div className="text-xl md:text-2xl font-bold text-white mt-6 mb-6">
         {dictionary.name}
       </div>
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center gap-x-5">
         <a
           href={`mailto:${data.email}`}
           target="_blank"
@@ -34,8 +35,17 @@ const Footer = ({ dictionary }: Props) => {
         >
           <Image src={linkedin} width={28} height={28} alt="LinkedIn" />
         </a>
-        <a href={`tel:${data.phone}`} className="cursor-pointer block">
-          <Image src={phone} width={28} height={28} alt="LinkedIn" />
+        <a
+          href={`https://wa.me/${data.phone}`}
+          className="cursor-pointer block"
+        >
+          <Image src={whatsapp} width={28} height={28} alt="LinkedIn" />
+        </a>
+        <a
+          href={`https://wa.me/${data.telegramId}`}
+          className="cursor-pointer block"
+        >
+          <Image src={telegramWhite} width={28} height={28} alt="Telegram" />
         </a>
       </div>
     </footer>
