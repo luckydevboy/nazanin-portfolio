@@ -45,6 +45,7 @@ const Introduction = ({ dictionary }: Props) => {
         }`}
         href={`https://wa.me/${data.phone}`}
         onClick={() => setClicked(true)}
+        dir="ltr"
       >
         <span>
           {data.phone.replace(

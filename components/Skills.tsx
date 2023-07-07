@@ -15,7 +15,7 @@ const Skills = ({ dictionary }: Props) => {
       <h1 className="text-tertiary text-2xl xl:text-4xl font-bold border-b-4 xl:border-b-4 inline-block px-4 pb-1.5 border-primary mb-8 xl:mb-24">
         {dictionary.skills.title}
       </h1>
-      <div className="flex justify-center xl:flex-col flex-wrap xl:max-h-80 xl:text-left xl:justify-start">
+      <div className="flex justify-center xl:flex-col flex-wrap xl:max-h-80 xl:text-start xl:justify-start">
         {dictionary.skills.list.map((skill, index) => (
           <React.Fragment key={`skill-${index}`}>
             <div className="text-tertiary text-2xl font-semibold my-2 hidden xl:block">

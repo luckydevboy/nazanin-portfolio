@@ -16,7 +16,7 @@ const Experiences = ({ dictionary }: Props) => {
       <div className="flex flex-col xl:grid xl:grid-cols-2 xl:gap-y-16 w-full max-w-lg xl:max-w-6xl px-8">
         {dictionary.experiences.list.map((exp, index) => (
           <div
-            className="text-center xl:text-left xl:w-96 xl:justify-self-center"
+            className="text-center xl:text-start xl:w-96 xl:justify-self-center"
             key={`experience-${index}`}
           >
             <div className="text-lg xl:text-2xl font-bold text-tertiary mb-1">
