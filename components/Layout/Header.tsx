@@ -16,7 +16,7 @@ const Header = ({ dictionary }: Props) => {
         <Image src={logo} width={64} height={64} alt="Logo" />
       </div>
       <div className="xl:hidden flex-shrink-0">
-        <Image src={logo} width={40} height={40} alt="Logo" />
+        <Image src={logo} width={35} height={35} alt="Logo" />
       </div>
 
       <ul className="flex gap-x-4 xl:gap-x-10 ml-12 px-4 py-2 overflow-x-auto">

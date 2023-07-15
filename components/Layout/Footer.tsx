@@ -14,7 +14,7 @@ type Props = {
 const Footer = ({ dictionary }: Props) => {
   return (
     <footer className="bg-primary py-12 md:py-24 flex flex-col justify-center items-center">
-      <Image src={logo} width={64} height={64} alt="Logo" />
+      <Image src={logo} width={50} height={50} alt="Logo" />
       <div className="text-xl md:text-2xl font-bold text-white mt-6 mb-6">
         {dictionary.name}
       </div>
