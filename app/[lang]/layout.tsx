@@ -64,7 +64,7 @@ export default async function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://nazanin.vercel.app/images/preview-meta-tag.png"
+          content="https://ik.imagekit.io/mggo9dfob/preview-meta-tag.jpg?updatedAt=1690547641336"
         />
 
         {/* Twitter */}
@@ -77,7 +77,7 @@ export default async function RootLayout({
         />
         <meta
           property="twitter:image"
-          content="https://nazanin.vercel.app/images/preview-meta-tag.png"
+          content="https://ik.imagekit.io/mggo9dfob/preview-meta-tag.jpg?updatedAt=1690547641336"
         />
 
         {/* favicon */}
