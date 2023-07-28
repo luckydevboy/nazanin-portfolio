@@ -50,6 +50,44 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang} dir={setDir(params.lang)}>
+      <head>
+        {/* Primary Meta Tags */}
+        <title>{dictionary.name}</title>
+        <meta name="title" content={dictionary.name} />
+        <meta
+          name="description"
+          content={`${dictionary.name}'s personal website`}
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nazanin.vercel.app/" />
+        <meta property="og:title" content={dictionary.name} />
+        <meta
+          property="og:description"
+          content={`${dictionary.name}'s personal website`}
+        />
+        <meta
+          property="og:image"
+          content="https://nazanin.vercel.app/images/preview-meta-tag.png"
+        />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://nazanin.vercel.app/" />
+        <meta property="twitter:title" content={dictionary.name} />
+        <meta
+          property="twitter:description"
+          content={`${dictionary.name}'s personal website`}
+        />
+        <meta
+          property="twitter:image"
+          content="https://nazanin.vercel.app/images/preview-meta-tag.png"
+        />
+
+        {/* favicon */}
+        <link rel="shortcut icon" href="/app/favicon.ico" />
+      </head>
       <body
         className={params.lang === "en" ? nunito.className : dana.className}
       >
