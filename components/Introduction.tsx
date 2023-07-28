@@ -4,15 +4,12 @@ import Image from "next/image";
 import { useState } from "react";
 import portrait from "@/public/images/my-portrait.jpg";
 import whatsappWhite from "@/public/icons/whatsapp-white.svg";
-import camera from "@/public/icons/camera.svg";
 import whatsapp from "@/public/icons/whatsapp.svg";
 import telegram from "@/public/icons/telegram.svg";
 import email from "@/public/icons/email.svg";
 import linkedin from "@/public/icons/linkedin.svg";
 import { Dictionary } from "@/types";
 import data from "@/data";
-import Modal from "@/components/Modal";
-import { PuffLoader } from "react-spinners";
 
 type Props = {
   dictionary: Dictionary;
@@ -20,7 +17,6 @@ type Props = {
 
 const Introduction = ({ dictionary }: Props) => {
   const [clicked, setClicked] = useState(false);
-  const [movieModal, setMovieModal] = useState(false);
 
   return (
     <section className="flex flex-col items-center bg-secondary py-12 xl:py-36 relative">
@@ -59,13 +55,13 @@ const Introduction = ({ dictionary }: Props) => {
         </span>
         <Image src={whatsappWhite} width={28} height={28} alt="Phone" />
       </a>
-      <button
-        onClick={() => setMovieModal(true)}
-        className="bg-white text-primary border border-primary border-dashed w-56 h-12 flex gap-x-3 items-center text-md font-bold justify-center rounded-md mt-3"
-      >
-        <Image src={camera} width={28} height={28} alt="Camera" />
-        {dictionary.myVideo}
-      </button>
+      <div className="h_iframe-aparat_embed_frame">
+        <span style={{ display: "block", paddingTop: "57%" }}></span>
+        <iframe
+          src="https://www.aparat.com/video/video/embed/videohash/GTPK3/vt/frame?autoplay=true&recom=self"
+          allowFullScreen={true}
+        ></iframe>
+      </div>
       <div className="hidden xl:flex xl:flex-col xl:gap-y-3 absolute top-1/2 transform -translate-y-1/2 left-12">
         <a
           href={`mailto:${data.email}`}
@@ -93,19 +89,6 @@ const Introduction = ({ dictionary }: Props) => {
           <Image src={telegram} width={28} height={28} alt="Telegram" />
         </a>
       </div>
-      <Modal open={movieModal} setOpen={setMovieModal}>
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <PuffLoader color="white" />
-        </div>
-        <div className="h_iframe-aparat_embed_frame">
-          <span style={{ display: "block", paddingTop: "57%" }}></span>
-          <iframe
-            src="https://www.aparat.com/video/video/embed/videohash/GTPK3/vt/frame?autoplay=true&recom=self"
-            allow="autoplay"
-            allowFullScreen={true}
-          ></iframe>
-        </div>
-      </Modal>
     </section>
   );
 };
