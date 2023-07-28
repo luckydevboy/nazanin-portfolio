@@ -26,7 +26,7 @@ const LangSwitch = () => {
   return (
     <>
       <div
-        className="fixed cursor-pointer right-4 bottom-4 bg-white rounded-full p-2 shadow-primary shadow-lg"
+        className="fixed cursor-pointer right-4 bottom-4 xl:right-8 xl:bottom-8 bg-white rounded-full p-2 shadow-primary shadow-lg"
         onClick={() => setShowActions(!showActions)}
       >
         <Image src={globe} width={24} height={24} alt="Globe" />

@@ -10,13 +10,43 @@ import email from "@/public/icons/email.svg";
 import linkedin from "@/public/icons/linkedin.svg";
 import { Dictionary } from "@/types";
 import data from "@/data";
+import { useParams } from "next/navigation";
 
 type Props = {
   dictionary: Dictionary;
 };
 
+const phoneNumberChars = (phone: string, lang: "fa" | "en") => {
+  let _phone = phone;
+  _phone = _phone.replace(/^(\+\d{2})(\d{3})(\d{3})(\d{4})$/, "$1 $2 $3 $4");
+  if (lang === "fa") {
+    const persianDigits: { [index: string]: string } = {
+      "0": "۰",
+      "1": "۱",
+      "2": "۲",
+      "3": "۳",
+      "4": "۴",
+      "5": "۵",
+      "6": "۶",
+      "7": "۷",
+      "8": "۸",
+      "9": "۹",
+    };
+
+    const replaceDigits = (match: string) => persianDigits[match];
+
+    // Regular expression to find English digits (0-9)
+    const pattern = /\d/g;
+
+    // Use replace() with the regular expression and the replacement function
+    _phone = _phone.replace(pattern, replaceDigits);
+  }
+  return _phone;
+};
+
 const Introduction = ({ dictionary }: Props) => {
   const [clicked, setClicked] = useState(false);
+  const params = useParams();
 
   return (
     <section className="flex flex-col items-center bg-secondary py-12 xl:py-36 relative">
@@ -40,19 +70,16 @@ const Introduction = ({ dictionary }: Props) => {
         {dictionary.aboutMe}
       </div>
       <a
-        className={`bg-primary text-white w-56 h-12 flex gap-x-3 items-center text-lg font-bold justify-center rounded-md ${
+        className={`bg-primary text-white w-56 h-12 flex ${
+          params.lang === "en" ? "flex-row-reverse" : ""
+        } gap-x-3 items-center text-lg font-bold justify-center rounded-md ${
           clicked ? "border border-white border-dashed" : ""
         }`}
         href={`https://wa.me/${data.phone}`}
         onClick={() => setClicked(true)}
         dir="ltr"
       >
-        <span>
-          {data.phone.replace(
-            /^(\+\d{2})(\d{3})(\d{3})(\d{4})$/,
-            "$1 $2 $3 $4"
-          )}
-        </span>
+        <span>{phoneNumberChars(data.phone, params.lang as "fa" | "en")}</span>
         <Image src={whatsappWhite} width={28} height={28} alt="Phone" />
       </a>
       <div className="h_iframe-aparat_embed_frame">

@@ -13,7 +13,7 @@ const Header = ({ dictionary }: Props) => {
   return (
     <nav className="flex max-w-3xl xl:max-w-6xl items-center justify-between mx-auto px-4 py-4 xl:px-0 xl:py-8">
       <div className="hidden xl:block flex-shrink-0">
-        <Image src={logo} width={64} height={64} alt="Logo" />
+        <Image src={logo} width={50} height={50} alt="Logo" />
       </div>
       <div className="xl:hidden flex-shrink-0">
         <Image src={logo} width={35} height={35} alt="Logo" />
