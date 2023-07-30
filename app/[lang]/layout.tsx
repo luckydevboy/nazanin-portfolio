@@ -49,19 +49,13 @@ export default async function RootLayout({
         {/* Primary Meta Tags */}
         <title>{dictionary.name}</title>
         <meta name="title" content={dictionary.name} />
-        <meta
-          name="description"
-          content={`${dictionary.name}'s personal website`}
-        />
+        <meta name="description" content={dictionary.description} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nazanin.vercel.app/" />
         <meta property="og:title" content={dictionary.name} />
-        <meta
-          property="og:description"
-          content={`${dictionary.name}'s personal website`}
-        />
+        <meta property="og:description" content={dictionary.description} />
         <meta
           property="og:image"
           content="https://ik.imagekit.io/mggo9dfob/preview-meta-tag.jpg?updatedAt=1690547641336"
