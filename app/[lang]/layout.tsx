@@ -65,10 +65,7 @@ export default async function RootLayout({
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://nazanin.vercel.app/" />
         <meta property="twitter:title" content={dictionary.name} />
-        <meta
-          property="twitter:description"
-          content={`${dictionary.name}'s personal website`}
-        />
+        <meta property="twitter:description" content={dictionary.description} />
         <meta
           property="twitter:image"
           content="https://ik.imagekit.io/mggo9dfob/preview-meta-tag.jpg?updatedAt=1690547641336"
