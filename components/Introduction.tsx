@@ -72,11 +72,11 @@ const Introduction = ({ dictionary }: Props) => {
       <div className="text-base font-semibold xl:text-2xl xl:font-bold text-tertiary">
         {dictionary.role}
       </div>
-      <div className="text-base font-semibold xl:text-lg text-tertiary max-w-lg xl:max-w-2xl text-center px-2 xl:px-8 my-6">
+      <div className="text-base font-semibold xl:text-lg text-tertiary max-w-lg xl:max-w-2xl text-center px-2 xl:px-8 mt-6">
         {dictionary.aboutMe}
       </div>
       <a
-        className={`bg-primary text-white w-56 h-12 flex ${
+        className={`bg-primary text-white w-56 h-12 flex mt-6 mb-12 ${
           params.lang === "en" ? "flex-row-reverse" : ""
         } gap-x-3 items-center text-lg font-bold justify-center rounded-md ${
           clicked ? "border border-white border-dashed" : ""
