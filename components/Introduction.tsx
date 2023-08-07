@@ -63,16 +63,13 @@ const Introduction = ({ dictionary }: Props) => {
         <Image src={portrait} fill alt="Portrait" />
       </div>
 
-      <div className="text-base font-semibold xl:text-2xl xl:font-bold text-tertiary mt-6">
-        {dictionary.greeting}
-      </div>
-      <div className="text-lg xl:text-4xl font-bold text-tertiary my-1.5">
+      <div className="text-lg xl:text-4xl font-bold text-tertiary mt-6 mb-1.5">
         {dictionary.name}
       </div>
       <div className="text-base font-semibold xl:text-2xl xl:font-bold text-tertiary">
         {dictionary.role}
       </div>
-      <div className="text-base font-semibold xl:text-lg text-tertiary max-w-lg xl:max-w-2xl text-center px-2 xl:px-8 mt-6">
+      <div className="text-base font-semibold xl:text-lg text-tertiary max-w-lg xl:max-w-2xl text-center px-6 xl:px-8 mt-6 leading-7">
         {dictionary.aboutMe}
       </div>
       <a

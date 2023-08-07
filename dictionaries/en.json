@@ -1,9 +1,8 @@
 {
-  "greeting": "Hi, I'm",
   "name": "Nazanin Namjoo Nik",
   "description": "Nazanin Namjoo Nik's personal website",
   "role": "English Teacher & Translator",
-  "aboutMe": "I am an experienced teacher with more than 20 years of experience and a TTC degree in all three levels \uD83C\uDF20 My effective methods will help you achieve your English learning goals \uD83C\uDF20 We'll focus on writing, reading, listening, and speaking skills for excellent results \uD83C\uDF20",
+  "aboutMe": "I am an experienced teacher with more than 20 years of experience and a TTC degree in all three levels. My effective methods will help you achieve your English learning goals. We'll focus on writing, reading, listening, and speaking skills for excellent results.",
   "educations": {
     "title": "Educations",
     "list": [
