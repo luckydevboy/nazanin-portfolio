@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import portrait from "@/public/images/my-portrait.jpg";
 import whatsappWhite from "@/public/icons/whatsapp-white.svg";
 import whatsapp from "@/public/icons/whatsapp.svg";
@@ -11,7 +11,6 @@ import linkedin from "@/public/icons/linkedin.svg";
 import { Dictionary } from "@/types";
 import data from "@/data";
 import { useParams } from "next/navigation";
-import handleScroll from "@/utils/handleScroll";
 
 type Props = {
   dictionary: Dictionary;
@@ -47,12 +46,7 @@ const phoneNumberChars = (phone: string, lang: "fa" | "en") => {
 
 const Introduction = ({ dictionary }: Props) => {
   const [clicked, setClicked] = useState(false);
-  const [loaded, setLoaded] = useState(false);
   const params = useParams();
-
-  useEffect(() => {
-    if (loaded) handleScroll("#introduction-video");
-  }, [loaded]);
 
   return (
     <section className="flex flex-col items-center bg-secondary py-12 xl:py-36 relative">
@@ -85,15 +79,12 @@ const Introduction = ({ dictionary }: Props) => {
         <span>{phoneNumberChars(data.phone, params.lang as "fa" | "en")}</span>
         <Image src={whatsappWhite} width={28} height={28} alt="Phone" />
       </a>
-      <div className="h_iframe-aparat_embed_frame" id="introduction-video">
-        <span style={{ display: "block", paddingTop: "57%" }}></span>
-        <iframe
-          src="https://www.aparat.com/video/video/embed/videohash/GTPK3/vt/frame?titleShow=true&muted=true&autoplay=true&recom=self"
-          allow="autoplay"
-          allowFullScreen={true}
-          onLoad={() => setLoaded(true)}
-        ></iframe>
-      </div>
+
+      <video width="700" autoPlay muted loop controls className="md:rounded-md">
+        <source src="/videos/presentation.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <div className="hidden xl:flex xl:flex-col xl:gap-y-3 absolute top-1/2 transform -translate-y-1/2 left-12">
         <a
           href={`mailto:${data.email}`}
