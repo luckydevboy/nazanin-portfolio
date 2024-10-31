@@ -8,9 +8,10 @@ import whatsapp from "@/public/icons/whatsapp.svg";
 import telegram from "@/public/icons/telegram.svg";
 import email from "@/public/icons/email.svg";
 import linkedin from "@/public/icons/linkedin.svg";
-import { Dictionary } from "@/types";
-import data from "@/data";
+import { Dictionary } from "../types";
+import data from "../data";
 import { useParams } from "next/navigation";
+import { motion } from "framer-motion";
 
 type Props = {
   dictionary: Dictionary;
@@ -49,7 +50,12 @@ const Introduction = ({ dictionary }: Props) => {
   const params = useParams();
 
   return (
-    <section className="flex flex-col items-center bg-secondary py-12 xl:py-36 relative">
+    <motion.section
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.1 }}
+      className="flex flex-col items-center bg-secondary py-12 xl:py-36 relative"
+    >
       <div className="rounded-full overflow-hidden relative hidden xl:block w-48 h-48">
         <Image src={portrait} fill alt="Portrait" />
       </div>
@@ -57,17 +63,17 @@ const Introduction = ({ dictionary }: Props) => {
         <Image src={portrait} fill alt="Portrait" />
       </div>
 
-      <div className="text-lg xl:text-4xl font-bold text-tertiary mt-6 mb-1.5">
+      <div className="text-lg xl:text-4xl font-extrabold text-tertiary mt-12 mb-2">
         {dictionary.name}
       </div>
       <div className="text-base font-semibold xl:text-2xl xl:font-bold text-tertiary">
         {dictionary.role}
       </div>
-      <div className="text-base font-semibold xl:text-lg text-tertiary max-w-lg xl:max-w-2xl text-center px-6 xl:px-8 mt-6 leading-7">
+      <div className="text-base font-semibold xl:text-lg text-tertiary max-w-lg xl:max-w-2xl text-center px-6 xl:px-8 my-12 leading-7">
         {dictionary.aboutMe}
       </div>
       <a
-        className={`bg-primary text-white w-56 h-12 flex mt-6 mb-12 ${
+        className={`bg-primary text-white w-56 h-12 flex ${
           params.lang === "en" ? "flex-row-reverse" : ""
         } gap-x-3 items-center text-lg font-bold justify-center rounded-md ${
           clicked ? "border border-white border-dashed" : ""
@@ -80,12 +86,19 @@ const Introduction = ({ dictionary }: Props) => {
         <Image src={whatsappWhite} width={28} height={28} alt="Phone" />
       </a>
 
-      <video width="700" autoPlay muted loop controls className="md:rounded-md">
+      <video
+        width="700"
+        autoPlay
+        muted
+        loop
+        controls
+        className="md:rounded-md mt-12"
+      >
         <source src="/videos/presentation.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="hidden xl:flex xl:flex-col xl:gap-y-3 absolute top-1/2 transform -translate-y-1/2 left-12">
+      <div className="hidden xl:flex xl:flex-col xl:gap-y-5 absolute top-1/2 transform -translate-y-1/2 left-12">
         <a
           href={`mailto:${data.email}`}
           target="_blank"
@@ -112,7 +125,7 @@ const Introduction = ({ dictionary }: Props) => {
           <Image src={telegram} width={28} height={28} alt="Telegram" />
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

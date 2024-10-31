@@ -1,9 +1,9 @@
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
-import Introduction from "../../components/Introduction";
-import Educations from "@/components/Educations";
-import Experiences from "@/components/Experiences";
-import Skills from "@/components/Skills";
+import Introduction from "@/src/components/introduction";
+import Educations from "@/src/components/educations";
+import Experiences from "@/src/components/experiences";
+import Skills from "@/src/components/skills";
 import Script from "next/script";
 
 export default async function Home({

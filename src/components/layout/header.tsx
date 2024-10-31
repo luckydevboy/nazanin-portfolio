@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import handleScroll from "../../utils/handleScroll";
+import handleScroll from "@/src/utils/handleScroll";
 import logo from "@/public/images/logo.png";
-import { Dictionary } from "@/types";
+import { Dictionary } from "../../types";
 
 type Props = {
   dictionary: Dictionary;

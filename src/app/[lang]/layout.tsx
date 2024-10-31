@@ -3,9 +3,9 @@ import "../globals.css";
 import { Nunito } from "next/font/google";
 import localFont from "next/font/local";
 import React from "react";
-import Header from "@/components/Layout/Header";
-import Footer from "@/components/Layout/Footer";
-import LangSwitch from "@/components/LangSwitch";
+import Header from "@/src/components/layout/header";
+import Footer from "@/src/components/layout/footer";
+import LangSwitch from "@/src/components/lang-switch";
 import { getDictionary } from "@/get-dictionary";
 
 const nunito = Nunito({
@@ -72,7 +72,7 @@ export default async function RootLayout({
         />
 
         {/* favicon */}
-        <link rel="shortcut icon" href="/app/favicon.ico" />
+        <link rel="shortcut icon" href="/src/app/favicon.ico" />
       </head>
       <body
         className={params.lang === "en" ? nunito.className : dana.className}

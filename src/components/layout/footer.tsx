@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Dictionary } from "@/types";
+
+import { Dictionary } from "../../types";
 import linkedin from "@/public/icons/linkedin-white.svg";
 import email from "@/public/icons/email-white.svg";
 import whatsapp from "@/public/icons/whatsapp-white.svg";
 import telegramWhite from "@/public/icons/telegram-white.svg";
 import logo from "@/public/images/logo-white.png";
-import data from "@/data";
+import data from "../../data";
 
 type Props = {
   dictionary: Dictionary;
