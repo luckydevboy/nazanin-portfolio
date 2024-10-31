@@ -53,7 +53,6 @@ const Introduction = ({ dictionary }: Props) => {
     <motion.section
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.1 }}
       className="flex flex-col items-center bg-secondary py-12 xl:py-36 relative"
     >
       <div className="rounded-full overflow-hidden relative hidden xl:block w-48 h-48">
