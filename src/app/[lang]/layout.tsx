@@ -53,7 +53,7 @@ export default async function RootLayout({
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nazanin.vercel.app/" />
+        <meta property="og:url" content="https://nazaninnamjoo.ir/en" />
         <meta property="og:title" content={dictionary.name} />
         <meta property="og:description" content={dictionary.description} />
         <meta
@@ -63,7 +63,7 @@ export default async function RootLayout({
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://nazanin.vercel.app/" />
+        <meta property="twitter:url" content="https://nazaninnamjoo.ir/en" />
         <meta property="twitter:title" content={dictionary.name} />
         <meta property="twitter:description" content={dictionary.description} />
         <meta
